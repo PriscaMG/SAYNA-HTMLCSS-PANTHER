@@ -1,21 +1,21 @@
 /* Style de texte */
 @font-face {
-    font-family:'Panthera' ;
+    font-family:'Panthera';
     src: url(./font/PantheraRegular-MVZ9J.ttf);
 }
 
 @font-face {
-    font-family:'beyno' ;
+    font-family:'beyno';
     src: url(./font/beyno.ttf);
 }
 
 @font-face {
-    font-family:'Cantarell' ;
+    font-family:'Cantarell';
     src: url(./font/Cantarell-Regular.ttf);
 }
 
 @font-face {
-    font-family:'Wakanda' ;
+    font-family:'Wakanda';
     src: url(./font/WakandaForever-Regular.ttf);
 }
 
@@ -73,7 +73,7 @@ p{
     align-items: center;
     position: absolute;
     left : 35px;
-    top: 260px;
+    top: 243px;
 }
 
 .social{
@@ -108,6 +108,7 @@ p{
     display: flex;
     list-style-type: none;
 }
+
 .Logo{
     margin-top: 20px;
     width: 70%;
@@ -156,15 +157,293 @@ p{
 /* Deuxième section */
 .section2{
     display: inline-flex;
+    background-color: #021740;
+    margin-left: 100px;
+    height: 230px;
 }
+
+.section2 .image img{
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.section2 .image img:hover{
+    transform: scale(1.4);
+}
+
+.section2 a{
+    color: #ffffff9a;
+}
+
+.section2 p{
+    width: 90%;
+    text-align: justify;
+}
+
+.section2-text{
+    padding-left: 32px;
+}
+
+.section2-text:hover{
+    transform: scale(1.2);
+}
+
+/*.icon{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    right: 50px;
+    top: 85px;
+}*/
 
 /* Troisième section */
 .section3{
     display: flex;
+    justify-content:space-between;
+    margin-top: 120px;
 }
 
-/* Troisième section */
-.section4{
-    display: block;
+.section3-left{
+    margin-left: 180px;
 }
+
+.section3-left p{
+    text-align: justify;
+    width: 100%;
+}
+
+.section3-right{
+    margin-left: 140px;
+}
+
+.section3-right .image-BP{
+    position: relative;
+    height: 350px;
+    width: 250px;
+    margin-left: 50px;
+}
+
+.section3-right .image-BP:hover{
+    transform: scale(1.2);
+}
+
+.section3-biographie{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 350px;
+    height: 360px;
+    padding-top: 170px;
+    margin-top: -160px;
+}
+
+.section3-biographie h2{
+    font-size: 20px;
+    font-family:'Cantarell';
+    color: black;
+    text-align: center;
+}
+
+.section3-items ul li{
+    display: inline-flex;
+    list-style-type: none;
+    background-color: #3D2DA6;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-family:'Cantarell';
+}
+
+.section3-list ul li{
+    font-size: 12px;
+    list-style-type: none;
+    font-family:'Cantarell';
+    line-height: 20px;
+}
+
+/*.section3-right .image-BP-rond img{
+    height: 10%;
+    width: 10%;
+}*/
+
+/* Quatrième section */
+.section4{
+    background-image: url(./Illustrations/Accueil/Pantherhome7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.section4 .form{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff7c;
+    height: 470px;
+    width: 700px;
+    border-radius: 150px;
+    margin: 100px 320px;
+}
+
+.section4 .form p{
+    margin-top: 30px;
+    color: black;
+    font-family:'Cantarell';
+}
+
+.section4 .form p{
+    font-size: 15px;
+}
+
+.section4 .form span{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Label *::placeholder{
+    color: rgba(0, 0, 0, 0.695);
+    font-size: 12px;
+}
+
+.Label input[type="nom"], input[type="Email"], input[type="Message"]{
+    border: 1.5px solid rgba(0, 0, 0, 0.847);
+    background-color: transparent;
+    border-radius: 20px;
+    padding-right: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.Label input[type="Message"]{
+    padding-bottom: 120px;
+}
+
+.Label input[type="submit"]{
+    width: 20%;
+    border-radius: 20px;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.596);
+    background-color: #F2CEF2;
+    letter-spacing: 2px;
+}
+
+.Label input[type="submit"]:hover{
+    background-color: #3D2DA6;
+    color: #FFFFFF;
+}
+
+/*Section Footer*/
+#footer{
+    background-image: url(./Illustrations/All-pages/back_footer.png);
+    margin-top: 100px;
+    height: 550px;
+}
+
+.footer1{
+    display: flex;
+}
+
+.footer-logo{
+    margin-left: 250px;
+    margin-right: -50px;
+}
+
+.footer-logo img{
+    height: 300px;
+    width: 250px;
+    margin-top: 120px;
+}
+
+.footer-pages{
+    margin-top: 100px;
+    margin-left: 120px;
+}
+
+h4{
+    color: #ffffffbc;
+    font-weight: bold;
+    font-size: 16.5px;
+    font-family:'Cantarell';
+    margin-left: 40px;
+    letter-spacing: 3px;
+}
+
+.footer-pages ul li{
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #ffffffbc;
+    font-weight: 500;
+    font-family:'Cantarell';
+}
+
+.footer-pages a{
+    text-decoration: none;
+    color: #ffffffbc;
+    font-weight: 300;
+    font-family:'Cantarell';
+}
+
+.footer-pages a:hover{
+    color: #3D2DA6;
+}
+
+.footer-social-media ul li{
+    display: block;
+    list-style-type: none;
+    color: #ffffffbc;
+    font-weight: bold;
+    font-family:'Cantarell';
+}
+
+.footer-social-media{
+    margin-top: 100px;
+    margin-left: 165px;
+    line-height: 20px;
+}
+
+.footer-social-media a img{
+    height: 35px;
+    width: 35px;
+    margin-right: 20px;
+}
+
+.footer2{
+    display: flex;
+    list-style-type: none;
+    margin-left: 600px;
+    margin-top: -70px;
+    margin-bottom: 100px;
+}
+
+.footer2 .footer2-list{
+    display: flex;
+    color: #ffffffbc;
+}
+
+.footer2-list a{
+    color: #ffffffbc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    font-family:'Cantarell';
+    padding-right: 30px;
+}
+
+.footer2-list a:hover{
+    color: #3D2DA6;
+}
+
+
+
 
