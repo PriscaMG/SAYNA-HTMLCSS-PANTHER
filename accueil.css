@@ -189,14 +189,13 @@ p{
 .section2-text:hover{
     transform: scale(1.2);
 }
-
-/*.icon{
-    width: 35px;
-    height: 35px;
-    position: relative;
-    right: 50px;
-    top: 85px;
-}*/
+.icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 750px;
+}
 
 /* Troisième section */
 .section3{
@@ -362,6 +361,12 @@ p{
     height: 300px;
     width: 250px;
     margin-top: 120px;
+}
+
+.marvel{
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 310px;
 }
 
 .footer-pages{
