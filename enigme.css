@@ -122,6 +122,7 @@ p{
     animation: fade-in 2s ease-in-out forwards;
 }
 
+/*Première section côté gauche*/
 .section1-left img{
     height: 920px;
     width: 920px;
@@ -130,6 +131,7 @@ p{
     margin-top: -170px;
 }
 
+/*Première section côté droite*/
 .section1-right h2{
     font-size: 45px;
     letter-spacing: 6px;
@@ -186,7 +188,7 @@ h3{
     animation: fade-in 2s ease-in-out forwards;
 }
 
-/* Deuxième Section partie gauche*/
+/* Deuxième Section côté gauche*/
 .section2-left p{
     font-size: 13px;
     width: 70%;
@@ -282,7 +284,7 @@ h3{
     text-align: center;
   }
 
-/* Deuxième Section partie droite*/
+/* Deuxième Section côté droite*/
 .section2-right p{
     text-align: center;
     width: 70%;

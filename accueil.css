@@ -243,6 +243,7 @@ p{
     color: #9e91b7e7;
 }
 
+/* Troisième section côté gauche */
 .section3-left{
     margin-left: 180px;
 }
@@ -252,6 +253,7 @@ p{
     width: 100%;
 }
 
+/* Troisième section côté droite */
 .section3-right{
     margin-left: 140px;
     margin-right: 180px;

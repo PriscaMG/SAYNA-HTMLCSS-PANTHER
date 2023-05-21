@@ -173,6 +173,7 @@ p{
     font-size: 20px;
 }
 
+/*Deuxième section côté gauche*/
 .section2-left{
     text-align: justify;
     width: 45%;
@@ -189,6 +190,7 @@ iframe{
     padding: 50px 0;
 }
 
+/*Deuxième section côté droite*/
 .section2-right p{
     text-align: justify;
     width: 62%;
