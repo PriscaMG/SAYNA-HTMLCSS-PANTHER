@@ -72,8 +72,12 @@ p{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    left : 35px;
-    top: 243px;
+    left : 40px;
+    top: 270px;
+}
+
+.Social-media .social:hover{
+    filter: invert(20%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
 }
 
 .social{
@@ -83,17 +87,17 @@ p{
 }
 
 .left-border1{
-    border: solid 1.5px #9E91B7;
-    position: absolute;
-    left: 42px;
-    height: 9%;
+    border: solid 1.9px #9E91B7;
+    position: fixed;
+    left: 48px;
+    height: 40%;
 }
 
 .left-border2{
-    border: solid 1.5px #9E91B7;
-    position: absolute;
+    border: solid 1.9px #9E91B7;
+    position: fixed;
     left: 27px;
-    height: 14.5%;
+    height: 63%;
 }
 
 /* Navigateur header */
@@ -115,17 +119,35 @@ p{
     height: 45%;
 }
 
+.Logo:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+
 .Header-menu li a{
     padding-left: 60px;
     font-family:'beyno';
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     color: var(--white-color);
 }
 
 .Header-menu li a:hover{
-    color: var(--lavender-color);
     text-decoration: underline;
+}
+.Header-menu a.active{
+    color:#9E91B7;
+    text-decoration: underline;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 /* Première section */
@@ -137,6 +159,7 @@ p{
 .section1-text{
     width: 60%;
     margin-top: 160px;
+    animation: fade-in 2s ease-in-out forwards;
 }
 
 .section1-text p{
@@ -152,6 +175,7 @@ p{
     width: 70%;
     height: 70%;
     margin-top: 18px;
+    animation: fade-in 2s ease-in-out forwards;
 }
 
 /* Deuxième section */
@@ -160,6 +184,7 @@ p{
     background-color: #021740;
     margin-left: 100px;
     height: 230px;
+    animation: fade-in 2s ease-in-out forwards;
 }
 
 .section2 .image img{
@@ -177,6 +202,12 @@ p{
     color: #ffffff9a;
 }
 
+.section2-text h2{
+    font-size: 17px;
+    font-weight: 600;
+    color: #9e91b7e7;
+}
+
 .section2 p{
     width: 90%;
     text-align: justify;
@@ -184,6 +215,7 @@ p{
 
 .section2-text{
     padding-left: 32px;
+    padding-top: 20px;
 }
 
 .section2-text:hover{
@@ -202,6 +234,13 @@ p{
     display: flex;
     justify-content:space-between;
     margin-top: 120px;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+.section3 h2{
+    font-size: 17px;
+    font-weight: 600;
+    color: #9e91b7e7;
 }
 
 .section3-left{
@@ -215,6 +254,7 @@ p{
 
 .section3-right{
     margin-left: 140px;
+    margin-right: 180px;
 }
 
 .section3-right .image-BP{
@@ -239,9 +279,10 @@ p{
 
 .section3-biographie h2{
     font-size: 20px;
-    font-family:'Cantarell';
-    color: black;
+    color: rgba(0, 0, 0, 0.858);
     text-align: center;
+    font-family:'Cantarell';
+    letter-spacing: 2px;
 }
 
 .section3-items ul li{
@@ -253,20 +294,15 @@ p{
     padding: 10px;
     color: #FFFFFF;
     font-size: 10px;
-    font-family:'Cantarell';
 }
 
 .section3-list ul li{
     font-size: 12px;
     list-style-type: none;
-    font-family:'Cantarell';
     line-height: 20px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.775);
 }
-
-/*.section3-right .image-BP-rond img{
-    height: 10%;
-    width: 10%;
-}*/
 
 /* Quatrième section */
 .section4{
@@ -281,26 +317,29 @@ p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #ffffff7c;
+    /*background-color: #ffffff7c;*/
     height: 470px;
     width: 700px;
     border-radius: 150px;
     margin: 100px 320px;
+    background: linear-gradient(180deg,#ffffff,#ffffff0b);
 }
 
 .section4 .form p{
     margin-top: 30px;
     color: black;
-    font-family:'Cantarell';
 }
 
 .section4 .form p{
-    font-size: 15px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.666);
 }
 
 .section4 .form span{
     font-weight: bold;
     font-size: 30px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.666);
 }
 
 .Label *::placeholder{
@@ -323,23 +362,68 @@ p{
     padding-bottom: 120px;
 }
 
-.Label input[type="submit"]{
+/*Pop-up box*/
+.button {
     width: 20%;
     border-radius: 20px;
     border: none;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 30px;
     font-size: 11px;
+    text-decoration: none;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.596);
+    color: rgba(0, 0, 0, 0.631);
     background-color: #F2CEF2;
-    letter-spacing: 2px;
-}
+    letter-spacing: 1px;
+  }
+  .button:hover {
+    box-shadow:#021740 0 0 20px;
+  }
 
-.Label input[type="submit"]:hover{
-    background-color: #3D2DA6;
-    color: #FFFFFF;
-}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 20%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #3D2DA6;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    font-size: 20px;
+    color: #3D2DA6;
+  }
 
 /*Section Footer*/
 #footer{
@@ -400,7 +484,7 @@ h4{
 }
 
 .footer-pages a:hover{
-    color: #3D2DA6;
+    text-decoration: underline;
 }
 
 .footer-social-media ul li{
@@ -423,6 +507,14 @@ h4{
     margin-right: 20px;
 }
 
+.footer-social-media a .blanc:hover{
+    filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+.footer-social-media a .noir:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
 .footer2{
     display: flex;
     list-style-type: none;
@@ -431,22 +523,28 @@ h4{
     margin-bottom: 100px;
 }
 
+.footer2 p{
+    font-size: 13px;
+    padding-top: 4px;
+}
+
 .footer2 .footer2-list{
     display: flex;
     color: #ffffffbc;
+    margin-left: -10px;
 }
 
 .footer2-list a{
     color: #ffffffbc;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     font-family:'Cantarell';
-    padding-right: 30px;
+    padding-right: 25px;
 }
 
 .footer2-list a:hover{
-    color: #3D2DA6;
+    text-decoration: underline;
 }
 
 

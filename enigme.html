@@ -11,12 +11,12 @@
     <header>
         <nav class="Header">
             <div>
-            <a href="#"><img class="Logo" src="./Illustrations/All-pages/footer2.png" alt=""></a>
+            <a href="accueil.html"><img class="Logo" src="./Illustrations/All-pages/footer2.png" alt=""></a>
             </div>
             <ul class="Header-menu">
                 <li><a href="accueil.html">Accueil</a></li>
                 <li><a href="wakanda.html">Wakanda</a></li>
-                <li><a href="enigme.html">Enigme</a></li>
+                <li><a href="enigme.html" class="active">Enigme</a></li>
             </ul>
         </nav>
     </header>
@@ -32,8 +32,7 @@
     <p>Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde 
         rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la 
         vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des 
-        renseignements wakandais.
-        
+        renseignements wakandais. <br>
         Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, 
         et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
     <img class="circle" src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
@@ -42,30 +41,57 @@
 </div>
 
     <!--Deuxième section-->
-    <h3>“ SI JE SUIS FIDELE C’EST A CE TRONE 
+    <h3>“ SI JE SUIS FIDELE C’EST A CE TRONE <br>
         PEU IMPORTE QUI MONTE DESSUS ”</h3>
+<div class="section2">
+    <div class="section2-left">
     <p>Voici la transicription de l’alphabet :</p>
-    <p>A = <span>A</span> ; B = <span>B</span> ; C = <span>C</span> ; D = <span>D</span> ; E = <span>E</span> ; F = <span>F</span> ; G = <span>G</span> ; H = <span>H</span>h ; I = <span>I</span> ; J = <span>J</span> ; 
+    <p>A = <span>A</span> ; B = <span>B</span> ; C = <span>C</span> ; D = <span>D</span> ; E = <span>E</span> ; F = <span>F</span> ; G = <span>G</span> ; H = <span>H</span> ; I = <span>I</span> ; J = <span>J</span> ; 
 
         K = <span>K</span> ; L = <span>L</span> ; M = <span>M</span> ; N = <span>N</span> ; O = <span>O</span> ; P = <span>P</span> ; Q = <span>Q</span> ; R = <span>R</span> ; S = <span>S</span> ; T = <span>T</span> ;
         
         U = <span>U</span> ; V = <span>V</span> ; W = <span>W</span> ; X = <span>X</span> ; Y = <span>Y</span> ; Z = <span>Z</span>
     </p>
 
+    <div class="p-form">
     <p>Alors, as tu la réponse ?</p>
-    <label for="Réponse"></label>
+    </div>
+    <form action="" class="form">
+    <div>
+        <label for="Réponse"></label>
         <input type="Réponse" name="Réponse" placeholder="Réponse">
-    <input type="submit" value="ENVOYER">
+    </div>
+    <div>
+        <a class="button" href="#popup1">ENVOYER</a>
 
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Réponse envoyé !
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+
+    <div class="section2-right">
+    <div class="section2-right-text">
     <p>Le savais tu ?</p>
     <p>Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est 
         la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une 
         phrase. Et si tu regardais quel symbole revient le plus souvent ? </p>
+    </div>
     <img src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
+    </div>
+</div>
 
-
+    <!--Footer-->
     <Footer id="footer">
-        <img class="marvel" src="./Illustrations/All-pages/footer2.png" alt="">
+        <a href="accueil.html">
+            <img class="marvel" src="./Illustrations/All-pages/footer2.png" alt="">
+        </a> 
     <div class="footer1">
         <div class="footer-logo">
             <img src="./Illustrations/All-pages/footer1.png" alt="">
@@ -73,8 +99,8 @@
         <div class="footer-pages">
                 <h4>PAGES</h4>
                 <ul>
-                    <li><a href="#">A propos</a></li>
-                    <li><a href="#">Wakanda</a></li>
+                    <li><a href="accueil.html">A propos</a></li>
+                    <li><a href="wakanda.html">Wakanda</a></li>
                 </ul>
         </div>
     
@@ -82,10 +108,10 @@
             <h4>RETROUVEZ NOUS</h4>
             <ul>
                 <li>
-                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer3.png" alt=""></a>
-                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer4.png" alt=""></a>
-                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer5.png" alt=""></a>
-                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer6.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All-pages/footer3.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All-pages/footer4.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All-pages/footer5.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All-pages/footer6.png" alt=""></a>
                 </li>
             </ul>
         </div>
@@ -97,7 +123,7 @@
            <li><a href="#">Conditions d’utilisation</a></li>
         </ul>
     </div>
-    </Footer> 
+    </Footer>
     
 </body>
 </html>

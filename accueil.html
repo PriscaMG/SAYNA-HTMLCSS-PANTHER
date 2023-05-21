@@ -14,10 +14,10 @@
     <header>
         <nav class="Header">
             <div>
-            <a href="#"><img class="Logo" src="./Illustrations/All-pages/footer2.png" alt=""></a>
+            <a href="accueil.html"><img class="Logo" src="./Illustrations/All-pages/footer2.png" alt=""></a>
             </div>
             <ul class="Header-menu">
-                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="accueil.html" class="active">Accueil</a></li>
                 <li><a href="wakanda.html">Wakanda</a></li>
                 <li><a href="enigme.html">Enigme</a></li>
             </ul>
@@ -25,12 +25,12 @@
     </header>
 
     <!--Réseaux sociaux-->
-    <div class="Social-media">
+<div class="Social-media" style="position : fixed;">
     <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All-pages/icon_facebook.png" alt=""></a>
     <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All-pages/icon_instagram.png" alt=""></a>
     <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All-pages/icon_twitter.png" alt=""></a>
     <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All-pages/icon_tiktok.png" alt=""></a>
-    </div>
+</div>
 
     <!--Première section-->
     <div class="section1">
@@ -167,9 +167,8 @@
                 </ul>
             </div>
         </div>
-        <div image="image-BP-rond"><img src="./Illustrations/Accueil/Pantherhome6.png" alt=""></div>
+        <div image="image-BP-rond"><img src="./Illustrations/Accueil/Pantherhome8.png" alt=""></div>
     </div> 
-
 </div>
 
         <!--Quatrième section | Contact-->
@@ -190,14 +189,26 @@
             <label for="Message"></label>
             <input type="Message" name="Message" placeholder="Message">
         </div>
-        <div><input type="submit" value="ENVOYER"></div>
+       
+        <a class="button" href="#popup1">ENVOYER</a>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Message envoyé !
+                </div>
+            </div>
+        </div>
     </div>
     </form>
 </div>
 
     <!--Footer-->
 <Footer id="footer">
-    <img class="marvel" src="./Illustrations/All-pages/footer2.png" alt="">
+    <a href="accueil.html">
+        <img class="marvel" src="./Illustrations/All-pages/footer2.png" alt="">
+    </a> 
 <div class="footer1">
     <div class="footer-logo">
         <img src="./Illustrations/All-pages/footer1.png" alt="">
@@ -205,8 +216,8 @@
     <div class="footer-pages">
             <h4>PAGES</h4>
             <ul>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Wakanda</a></li>
+                <li><a href="accueil.html">A propos</a></li>
+                <li><a href="wakanda.html">Wakanda</a></li>
             </ul>
     </div>
 
@@ -214,10 +225,10 @@
         <h4>RETROUVEZ NOUS</h4>
         <ul>
             <li>
-                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer3.png" alt=""></a>
-                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer4.png" alt=""></a>
-                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer5.png" alt=""></a>
-                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./Illustrations/All-pages/footer6.png" alt=""></a>
+                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All-pages/footer3.png" alt=""></a>
+                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All-pages/footer4.png" alt=""></a>
+                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All-pages/footer5.png" alt=""></a>
+                <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All-pages/footer6.png" alt=""></a>
             </li>
         </ul>
     </div>

@@ -85,17 +85,36 @@ p{
     height: 45%;
 }
 
+.Logo:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+
 .Header-menu li a{
     padding-left: 60px;
     font-family:'beyno';
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     color: var(--white-color);
 }
 
 .Header-menu li a:hover{
-    color: var(--lavender-color);
     text-decoration: underline;
+}
+
+.Header-menu a.active{
+    color:#9E91B7;
+    text-decoration: underline;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 /*Première section*/
@@ -107,36 +126,86 @@ p{
     height: 900px;
     background-position-x: -200px;
     background-position-y: -100px;
+    animation: fade-in 2s ease-in-out forwards;
 }
 
 .section1-text h2{
-    font-size: 42px;
+    font-size: 43px;
     letter-spacing: 3px;
     margin-left: 150px;
-    padding-top: 250px;
+    padding-top: 270px;
 }
 
 .section1-text h3{
     color: var(--lavender-color);
-    font-size: 25px;
+    font-size: 25.5px;
     letter-spacing: 7px;
     margin-left: 150px;
-    padding-top: 10px;
+    margin-top: -30px;
 }
 
 .section1-text p{
     width: 26%;
     text-align: justify;
     margin-left: 150px;
-    padding-top: 50px;
+    padding-top: 3px;
 }
 
 /*Deuxième section*/
+.tiger img{
+   position: absolute;
+   height: 900px;
+   width: 1150px;
+   top: 750px;
+   left: 120px;
+   opacity: 0.9;
+   animation: fade-in 2s ease-in-out forwards;
+}
+
 .section2{
-    background-image: url(./Illustrations/Wakanda/Pantherwakanda2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
+    margin-top: -70px;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+.section2 h2{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.section2-left{
+    text-align: justify;
+    width: 45%;
+    margin-left: 150px;
+}
+
+.section2-left p{
+    color: #FFFFFF;
+}
+
+iframe{
+    height: 200px;
+    width: 470px;
+    padding: 50px 0;
+}
+
+.section2-right p{
+    text-align: justify;
+    width: 62%;
+    margin-left: 100px;
+    margin-right: 150px;
+    color: #FFFFFF;
+}
+
+.section2-right h2{
+    margin-left: 100px;
+}
+
+.section2-right img{
+    height: 250px;
+    width: 450px;
+    margin-left: 100px;
+    padding-top: 30px;
 }
 
 /*Section Footer*/
@@ -198,7 +267,7 @@ h4{
 }
 
 .footer-pages a:hover{
-    color: #3D2DA6;
+    text-decoration: underline;
 }
 
 .footer-social-media ul li{
@@ -221,6 +290,14 @@ h4{
     margin-right: 20px;
 }
 
+.footer-social-media a .blanc:hover{
+    filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+.footer-social-media a .noir:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
 .footer2{
     display: flex;
     list-style-type: none;
@@ -229,20 +306,26 @@ h4{
     margin-bottom: 100px;
 }
 
+.footer2 p{
+    font-size: 13px;
+    padding-top: 4px;
+}
+
 .footer2 .footer2-list{
     display: flex;
     color: #ffffffbc;
+    margin-left: -10px;
 }
 
 .footer2-list a{
     color: #ffffffbc;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     font-family:'Cantarell';
-    padding-right: 30px;
+    padding-right: 25px;
 }
 
 .footer2-list a:hover{
-    color: #3D2DA6;
+    text-decoration: underline;
 }
