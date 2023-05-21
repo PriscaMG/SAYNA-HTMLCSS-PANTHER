@@ -236,6 +236,10 @@ iframe{
     margin-left: 310px;
 }
 
+.marvel:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+
 .footer-pages{
     margin-top: 100px;
     margin-left: 120px;

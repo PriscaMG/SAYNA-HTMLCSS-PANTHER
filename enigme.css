@@ -100,7 +100,6 @@ p{
 .Header-menu li a:hover{
     text-decoration: underline;
 }
-
 .Header-menu a.active{
     color:#9E91B7;
     text-decoration: underline;
@@ -328,6 +327,10 @@ h3{
     position: absolute;
     margin-top: 240px;
     margin-left: 310px;
+}
+
+.marvel:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
 }
 
 .footer-pages{
