@@ -123,12 +123,22 @@ p{
 }
 
 /*Première section côté gauche*/
-.section1-left img{
+/*.section1-left img{
     height: 920px;
     width: 920px;
     image-rendering: auto;
     object-fit: cover;
     margin-top: -170px;
+}*/
+
+.section1{
+    background-image: url(./Illustrations/Enigme/Pantherenigme1.png);
+    image-rendering: auto;
+    height: 900px;
+    width: 830px;
+    background-size: cover;
+    background-position-x: -50px;
+    background-position-y: -180px;
 }
 
 /*Première section côté droite*/
@@ -138,7 +148,7 @@ p{
     text-align: justify;
     line-height: 60px;
     margin-top: 200px;
-    margin-left: -180px;
+    margin-left: 720px;
     font-weight: 400;
     color: #9E91B7;
 }
@@ -149,21 +159,22 @@ p{
 
 .section1-right p{
     text-align: justify;
-    width: 95%;
-    margin-left: -100px;
+    width: 28%;
+    margin-left: 800px;
     margin-top: 120px;
+    word-spacing: -1.2px;
 }
 
 .section1-right .circle{
     width: 580px;
-    height: 300px;
-    margin-left: -200px;
+    height: 320px;
+    margin-left: 700px;
     margin-top: -200px;
 }
 
 .section1-right .line{
-    margin-left: -200px;
-    margin-top: -60px;
+    margin-left: 720px;
+    margin-top: -100px;
     width: 600px;
     height: 5px;
 }
@@ -184,6 +195,7 @@ h3{
     line-height: 40px;
     width: 60%;
     margin-bottom: 30px;
+    margin-top: -120px;
     margin-left: 200px;
     animation: fade-in 2s ease-in-out forwards;
 }
