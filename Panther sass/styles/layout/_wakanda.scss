@@ -1,0 +1,95 @@
+@import '../base/_color.scss';
+@import '../base/_typo.scss';
+@import '../base/_global.scss';
+
+/*Première section*/
+.section1Wakanda{
+    background-image: url(../Illustrations/Wakanda/Pantherwakanda1.png);
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    background-position-x: -200px;
+    background-position-y: -100px;
+    animation: fade-in 2s ease-in-out forwards;
+    .section1-text {
+    h2{
+        font-size: 43px;
+        letter-spacing: 3px;
+        margin-left: 150px;
+        padding-top: 220px;
+    }
+    h3{
+        color: $lavender-color;
+        font-size: 25.5px;
+        letter-spacing: 7px;
+        margin-left: 150px;
+        margin-top: -30px;
+    }
+    p{
+        width: 26%;
+        text-align: justify;
+        margin-left: 150px;
+        padding-top: 3px;
+    }
+}
+}
+
+/*Deuxième section*/
+.tiger img{
+   position: absolute;
+   height: 900px;
+   width: 1150px;
+   top: 750px;
+   left: 120px;
+   opacity: 0.9;
+   animation: fade-in 2s ease-in-out forwards;
+}
+
+.section2Wakanda{
+    display: flex;
+    margin-top: -70px;
+    animation: fade-in 2s ease-in-out forwards;
+    /*Deuxième section côté gauche*/
+    .section2-left{
+        text-align: justify;
+        width: 45%;
+        margin-left: 150px;
+        h2{
+            font-weight: 300;
+            font-size: 20px;
+        }
+        p{
+            color: $white-color;
+        }
+        iframe{
+            height: 200px;
+            width: 470px;
+            padding: 50px 0;
+        }
+    }
+    /*Deuxième section côté droite*/
+    .section2-right {
+        h2{
+            margin-left: 100px;
+        }
+        p{
+            text-align: justify;
+            width: 62%;
+            margin-left: 100px;
+            margin-right: 150px;
+            color: $white-color;
+        }
+        img{
+            height: 250px;
+            width: 450px;
+            margin-left: 100px;
+            padding-top: 30px;
+        }   
+    }
+}
+
+
+
+
+

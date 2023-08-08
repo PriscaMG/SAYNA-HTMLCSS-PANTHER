@@ -1,0 +1,53 @@
+@import './_color.scss';
+@import './_typo.scss';
+
+html {
+    position: relative;
+    z-index: 1;
+    background-image: url(../Illustrations/All_pages/arrière_plan.png);
+  }
+  
+body {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1{
+    font-family:'Panthera';
+    font-size: 45px;
+    color: $lavender-color;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+h2{
+    font-family:'beyno';
+    font-size: 25px;
+    color: $lavender-color;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+h3{
+    font-family:'Wakanda';
+    font-size: 43px;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+p{
+    font-family:'Cantarell';
+    font-size: 10px;
+    color: $white-color;
+}
+
+/**Image qui suit la souris */
+#mouseImg{
+    position:absolute;
+    display:block;
+    width: 30px;
+    z-index:5;
+  }

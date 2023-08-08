@@ -1,0 +1,567 @@
+/* Style de texte */
+@font-face {
+    font-family:'Panthera';
+    src: url(../font/PantheraRegular-MVZ9J.ttf);
+}
+
+@font-face {
+    font-family:'beyno';
+    src: url(../font/beyno.ttf);
+}
+
+@font-face {
+    font-family:'Cantarell';
+    src: url(../font/Cantarell-Regular.ttf);
+}
+
+@font-face {
+    font-family:'Wakanda';
+    src: url(../font/WakandaForever-Regular.ttf);
+}
+
+/* Style du document */
+html {
+    position: relative;
+    z-index: 1;
+    background-image: url(../Illustrations/All_pages/arrière_plan.png)
+  }
+
+body {
+    position: relative;
+    z-index: 2;
+  }
+
+/* Couleur */
+:root{
+    --white-color : #FFFFFF;
+    --pink-light-color : #F2CEF2;
+    --lavender-color : #9E91B7;
+    --pink-color : #DF99F2;
+    --purple-color : #3D2DA6;
+    --blue-color : #07338C;
+    --dark-blue : #021740;
+}
+
+/* Style de police sur chaque niveau */
+h1{
+    font-family:'Panthera';
+    font-size: 45px;
+    color: var(--lavender-color);
+}
+
+h2{
+    font-family:'beyno';
+    font-size: 25px;
+    color: var(--lavender-color);
+}
+
+h3{
+    font-family:'Wakanda';
+    font-size: 43px;
+}
+
+p{
+    font-family:'Cantarell';
+    font-size: 10px;
+    color: #ffffff9a;
+}
+
+/* Navigateur header */
+.Header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Header-menu{
+    display: flex;
+    list-style-type: none;
+}
+
+.Logo{
+    margin-top: 20px;
+    width: 70%;
+    height: 45%;
+}
+
+.Logo:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+
+.Header-menu li a{
+    padding-left: 60px;
+    font-family:'beyno';
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.Header-menu li a:hover{
+    text-decoration: underline;
+}
+.Header-menu a.active{
+    color:#9E91B7;
+    text-decoration: underline;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+/*Première section*/
+.section1{
+    display: flex;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+/*Première section côté gauche*/
+/*.section1-left img{
+    height: 920px;
+    width: 920px;
+    image-rendering: auto;
+    object-fit: cover;
+    margin-top: -170px;
+}*/
+
+.section1{
+    background-image: url(../Illustrations/Enigme/Pantherenigme1.png);
+    image-rendering: auto;
+    height: 900px;
+    width: 830px;
+    background-size: cover;
+    background-position-x: -50px;
+    background-position-y: -180px;
+}
+
+/*Première section côté droite*/
+.section1-right h2{
+    font-size: 45px;
+    letter-spacing: 6px;
+    text-align: justify;
+    line-height: 60px;
+    margin-top: 200px;
+    margin-left: 720px;
+    font-weight: 400;
+    color: #9E91B7;
+}
+
+.section1-right h2 span{
+    letter-spacing: 3px;
+}
+
+.section1-right p{
+    text-align: justify;
+    width: 28%;
+    margin-left: 800px;
+    margin-top: 120px;
+    word-spacing: -1.2px;
+}
+
+.section1-right .circle{
+    width: 580px;
+    height: 320px;
+    margin-left: 700px;
+    margin-top: -200px;
+}
+
+.section1-right .line{
+    margin-left: 720px;
+    margin-top: -100px;
+    width: 600px;
+    height: 5px;
+}
+
+/* Deuxième Section côté droite*/
+.section2-right p{
+    text-align: center;
+    width: 70%;
+    word-spacing: 0.1px;
+    letter-spacing: 0.1px;
+}
+
+.section2-right-text{
+    padding-top: 90px;
+}
+
+.section2-right img{
+    width: 580px;
+    height: 300px;
+    margin-top: -180px;
+    margin-left: -90px;
+}
+
+/* SECTION 2 : Section Principale et formulaire */
+
+.section2-left #order {
+    font-family: "beyno";
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.section2-left span{
+    font-family:'Cantarell';
+}
+
+.section2-left .currentQuestion{
+    width: 150%;
+    font-size: 12px;
+}
+
+#translate {
+    font-family:'Wakanda';
+    font-size: 30px;
+    width: 120%;
+    letter-spacing: 3px;
+    line-height: 40px;
+    margin: 50px 0;
+}
+
+.section2-right-text {
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 45%;
+    width: 80%;
+}
+
+.section2-right-image{
+    margin-left: 42%;
+    margin-top: -10%;
+}
+
+.section2-right-text p{
+    font-size: 13px;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    margin: -7% 10% 10vw 15%;
+}
+
+/* Définition d'une grille pour placer les éléments sur les grands écrans*/
+@media screen and (min-width: 850px) {
+    .section2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "title  title art art"
+            "formu  formu art art";
+    }
+
+    .form {
+        margin-top: 50px;
+        margin-right: 20%;
+    }
+
+    .section2-right-text {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .section2-left {
+        grid-area: title;
+    }
+    
+    .form {
+        grid-area: formu;
+    }
+    .section2-right-text {
+        grid-area: art;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+/* Mettre la traduction de l'alphabet en inline */
+dt, dd {
+    display: inline;
+    font-size: 16px;
+    color: #9E91B7;
+    font-weight: bold;
+}
+
+dd {
+    font-family:'Wakanda';
+    margin-left: 2px;
+    margin-right: 8px;
+}
+
+/* Mise en page à l'intérieur des grilles */
+
+.quizzAnswerForm textarea {
+    color: #9E91B7;
+    font-size: 12px;
+    border-color: var(--mySoftPink);
+    background-color: transparent;
+    padding: 15px 15px;
+    height: 20px;
+    border-radius: 50px;
+    width: 100%;
+    margin: 2% 0 10%;
+}
+
+.quizzAnswerForm textarea::placeholder {
+    color: #9E91B7;
+}
+
+/* Boutons submit du formulaire */
+label{
+    color: #ffffffb7;
+}
+
+.submitButton button {
+    /* width: 174px;
+    height: 54px; trop grand */
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: #DF99F2;
+    font-weight: bolder;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.631);
+    cursor: pointer;
+}
+
+.submitButton button:hover {
+    box-shadow:#F2CEF2 0 0 20px; ;
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+}
+
+/**Bouton retour à l'accueil à la fin du quizz */
+#back {
+    display: none;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+#ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    color: white;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0%;
+    filter:blur(58px);
+    background : linear-gradient(#3D2DA6ee, #021740ee ) ;
+    display: none;
+    z-index: 2;
+  }
+
+  .PopupBox-content {
+    height: 70% ;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+    background: linear-gradient(#9E91B7, #3D2DA600);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3.45 3.45 #000000;
+    border-radius: 20px;
+    filter:none;
+  }
+
+  .win {
+    color: white;
+    font-family: Cantarell;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .winText {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .nextQuestion, #back {
+    width: 174px;
+    max-width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: var(--mySoftPink);
+    font-weight: bolder;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  #back {
+    display: none;
+  }
+
+  .comingFigCompte {
+    display: none;
+  }
+
+  .comingFigCompte * {
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .comingFigCompte h2 {
+    font-family: Cantarell;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .countDownBox {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .countDownBox div {
+    display: inline;
+    font-size:25px ;
+  }
+
+/*Section Footer*/
+#footer{
+    background-image: url(../Illustrations/All_pages/back_footer.png);
+    margin-top: 100px;
+    height: 550px;
+}
+
+.footer1{
+    display: flex;
+}
+
+.footer-logo{
+    margin-left: 250px;
+    margin-right: -50px;
+}
+
+.footer-logo img{
+    height: 300px;
+    width: 250px;
+    margin-top: 120px;
+}
+
+.marvel{
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 310px;
+}
+
+.marvel:hover{
+    filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+
+.footer-pages{
+    margin-top: 100px;
+    margin-left: 120px;
+}
+
+h4{
+    color: #ffffffbc;
+    font-weight: bold;
+    font-size: 16.5px;
+    font-family:'Cantarell';
+    margin-left: 40px;
+    letter-spacing: 3px;
+}
+
+.footer-pages ul li{
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #ffffffbc;
+    font-weight: 500;
+    font-family:'Cantarell';
+}
+
+.footer-pages a{
+    text-decoration: none;
+    color: #ffffffbc;
+    font-weight: 300;
+    font-family:'Cantarell';
+}
+
+.footer-pages a:hover{
+    text-decoration: underline;
+}
+
+.footer-social-media ul li{
+    display: block;
+    list-style-type: none;
+    color: #ffffffbc;
+    font-weight: bold;
+    font-family:'Cantarell';
+}
+
+.footer-social-media{
+    margin-top: 100px;
+    margin-left: 165px;
+    line-height: 20px;
+}
+
+.footer-social-media a img{
+    height: 35px;
+    width: 35px;
+    margin-right: 20px;
+}
+
+.footer-social-media a .blanc:hover{
+    filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+.footer-social-media a .noir:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+.footer2{
+    display: flex;
+    list-style-type: none;
+    margin-left: 600px;
+    margin-top: -70px;
+    margin-bottom: 100px;
+}
+
+.footer2 p{
+    font-size: 13px;
+    padding-top: 4px;
+}
+
+.footer2 .footer2-list{
+    display: flex;
+    color: #ffffffbc;
+    margin-left: -10px;
+}
+
+.footer2-list a{
+    color: #ffffffbc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    font-family:'Cantarell';
+    padding-right: 25px;
+}
+
+.footer2-list a:hover{
+    text-decoration: underline;
+}
+

@@ -1,0 +1,112 @@
+@import '../base/_color.scss';
+@import '../base/_typo.scss';
+@import '../base/_global.scss';
+
+.left-border1{
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    left: 48px;
+    height: 40%;
+    top: 0%;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.left-border2{
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    left: 27px;
+    height: 63%;
+    top: 0%;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.Social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left : 40px;
+    top: 260px;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+    .social{
+        padding: 10px 0;
+        width: 17px;
+        height: 17px;
+        &:hover{
+            filter: invert(20%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+        }
+        
+    }
+}
+
+@keyframes fade-in-scroll {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* Code général pour .left-border1 et .left-border2 */
+.left-border1
+.left-border2 {
+    border: solid 1.9px $lavender-color;
+    position: fixed;
+    animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+    .left-border1
+    .left-border2 {
+        left: 60px;
+    }
+
+    .left-border1 {
+        height: 10%;
+    }
+
+    .left-border2 {
+        height: 16%;
+    }
+
+    .Social-media {
+        left: 42px;
+        top: 220px;
+
+        .social {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .left-border1 
+    .left-border2 {
+        left: 80px;
+    }
+
+    .left-border1 {
+        height: 14%;
+    }
+
+    .left-border2 {
+        height: 20%;
+    }
+
+    .Social-media {
+        left: 57px;
+        top: 270px;
+
+        .social {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+

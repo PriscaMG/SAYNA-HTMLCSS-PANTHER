@@ -1,0 +1,252 @@
+@import '../base/_color.scss';
+@import '../base/_typo.scss';
+@import '../base/_global.scss';
+
+/*Première section*/
+.section1Enigme{
+    display: flex;
+    animation: fade-in 2s ease-in-out forwards;
+    background-image: url(../Illustrations/Enigme/Pantherenigme1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60%;
+    height: 70%;
+    .section1-right {
+        h2{
+            font-size: 45px;
+            letter-spacing: 6px;
+            text-align: justify;
+            line-height: 60px;
+            margin-top: 200px;
+            margin-left: 720px;
+            font-weight: 400;
+            color: $lavender-color;
+            span{
+                letter-spacing: 3px;
+            }            
+        }
+        p{
+            text-align: justify;
+            width: 28%;
+            margin-left: 800px;
+            margin-top: 120px;
+            word-spacing: -1.2px;
+        }
+        .circle{
+            width: 580px;
+            height: 320px;
+            margin-left: 700px;
+            margin-top: -200px;
+        }
+        .line{
+            margin-left: 720px;
+            margin-top: -100px;
+            width: 600px;
+            height: 5px;
+        }        
+    }
+} 
+
+/* SECTION 2 : Section Principale et formulaire */
+.section2Enigme{
+        display: flex;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: -10%;
+        .section2-left {
+            #order {
+                font-family: "beyno";
+                font-size: 25px;
+                text-decoration: underline;
+                span{
+                    font-family:'Cantarell';
+                }
+            }
+            .currentQuestion{
+                width: 120%;
+                font-size: 12px;
+            }
+            #translate {
+                font-family:'Wakanda';
+                font-size: 30px;
+                width: 80%;
+                letter-spacing: 3px;
+                line-height: 40px;
+                margin: 50px 0;
+            }
+            .form {
+                margin-top: 50px;
+                margin-right: 20%;
+                .quizzAnswerForm {
+                    label{
+                        color: $white-color;
+                    }
+                    textarea {
+                        color: $lavender-color;
+                        font-size: 12px;
+                        border-color: var(--mySoftPink);
+                        background-color: transparent;
+                        padding: 15px 15px;
+                        height: 20px;
+                        border-radius: 50px;
+                        width: 100%;
+                        margin: 2% 0 10%;
+                        &::placeholder {
+                            color: $lavender-color;
+                        }
+                    }
+                    .submitButton {
+                        display: flex;
+                        justify-content: center;
+                        button {
+                            /* width: 174px;
+                            height: 54px; trop grand */
+                            width: 125px;
+                            height: 40px;
+                            border: none;
+                            border-radius: 38px;
+                            background-color: $pink-color;
+                            font-weight: bolder;
+                            font-size: 12px;
+                            color: rgba(0, 0, 0, 0.631);
+                            cursor: pointer;
+                            &:hover {
+                                box-shadow:$pink-light-color 0 0 20px; ;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .section2-right{
+            .section2-right-text{
+                padding-top: 90px;
+                text-align: center;
+                margin-top: 25%;
+                margin-left: 15%;
+                width: 80%;
+                justify-self: center;
+                align-self: center;
+                p{
+                    font-size: 13px;
+                    text-align: center;
+                    width: 70%;
+                    word-spacing: 0.1px;
+                    letter-spacing: 0.1px;
+                }
+                dl{
+                    dt, dd {
+                        display: inline;
+                        font-size: 16px;
+                        color: $lavender-color;
+                        font-weight: bold;
+                    }
+                    
+                    dd {
+                        font-family:'Wakanda';
+                        margin-left: 2px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+            .section2-right-image{
+                margin-left: 5%;
+                margin-top: -15%;
+                img{
+                    width: 580px;
+                    height: 400px;
+                    margin-top: -180px;
+                }
+            }
+        }
+}
+
+
+//POPUPBOX DESIGN
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+.ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0%;
+    filter:blur(58px);
+    background : linear-gradient($purple-color, $dark-blue ) ;
+    display: none;
+    z-index: 2;
+  }
+
+#ResponsePopupBox {
+    height: 100% ;
+    width: 100%;
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    color: $white-color;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+        .PopupBox-content {
+            height: 70% ;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10%;
+            background: linear-gradient($lavender-color, #3D2DA600);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 3.45 3.45 #000000;
+            border-radius: 20px;
+            filter:none;
+            .win {
+                color: $white-color;
+                font-family: Cantarell;
+                text-transform: uppercase;
+                text-align: center;
+              }
+            .winText {
+                font-size: 14px;
+                text-align: center;
+              }
+            .nextQuestion, #back {
+                width: 174px;
+                max-width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 38px;
+                background-color: var(--mySoftPink);
+                font-weight: bolder;
+                font-size: 12px;
+                text-transform: uppercase;
+                /**Bouton retour à l'accueil à la fin du quizz */
+                    #back {
+                        display: none;
+                      }
+              }  
+            .comingFigCompte {
+              display: none;
+              * {
+                margin: 0 5px;
+                font-weight: bold;
+              }
+              .countDown{
+                h2 {
+                    font-family: Cantarell;
+                    color: $white-color;
+                    text-transform: uppercase;
+                  }
+                .countDownBox {
+                    font-size: 25px;
+                    font-weight: bold;
+                    div {
+                        display: inline;
+                        font-size:25px ;
+                      }
+                  }
+              }
+            }
+        }
+    }

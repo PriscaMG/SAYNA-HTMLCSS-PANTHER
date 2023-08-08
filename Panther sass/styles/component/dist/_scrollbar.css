@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+.left-border1 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  left: 48px;
+  height: 40%;
+  top: 0%;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.left-border2 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  left: 27px;
+  height: 63%;
+  top: 0%;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.Social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 40px;
+  top: 260px;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+.Social-media .social {
+  padding: 10px 0;
+  width: 17px;
+  height: 17px;
+}
+.Social-media .social:hover {
+  filter: invert(20%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+@keyframes fade-in-scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Code général pour .left-border1 et .left-border2 */
+.left-border1 .left-border2 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .left-border1 .left-border2 {
+    left: 60px;
+  }
+
+  .left-border1 {
+    height: 10%;
+  }
+
+  .left-border2 {
+    height: 16%;
+  }
+
+  .Social-media {
+    left: 42px;
+    top: 220px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .left-border1 .left-border2 {
+    left: 80px;
+  }
+
+  .left-border1 {
+    height: 14%;
+  }
+
+  .left-border2 {
+    height: 20%;
+  }
+
+  .Social-media {
+    left: 57px;
+    top: 270px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
+  }
+}

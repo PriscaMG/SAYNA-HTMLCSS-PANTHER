@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panther DCLIC | Enigme</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./JavaScript/enigme.js" defer></script>
+    <script src="./JavaScript/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Personalized mouse pointer -->
+    <div>
+        <img id="mouseImg" src="./Illustrations/All_pages/logo_souris_BP1_blanc.png" alt="">
+    </div>
+
+    <header>
+        <nav class="Header">
+            <div>
+                <a href="accueil.html"><img class="Logo" src="./Illustrations/All_pages/footer2.png" alt=""></a>
+            </div>
+            <ul class="Header-menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="wakanda.html">Wakanda</a></li>
+                <li><a href="enigme.html" class="active">Enigme</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!--Réseaux sociaux SCROLLABLE-->
+<div class="left-border1"></div>
+<div class="left-border2"></div>
+<div class="Social-media" style="position : fixed;">
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_facebook.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_instagram.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_twitter.png" alt=""></a>
+    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="social" src="./Illustrations/All_pages/icon_tiktok.png" alt=""></a>
+</div>
+
+    <!--Première section-->
+<div class="section1Enigme"> 
+    <div class="section1-right">
+    <h2>Releve le defi <br>
+        <span>des dora milaje</span></h2>
+    <p>Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde 
+        rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la 
+        vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des 
+        renseignements wakandais. <br>
+        Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, 
+        et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
+    <img class="circle" src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
+    <img class="line" src="./Illustrations/Enigme/Pantherenigme3.png" alt="">
+    </div>
+</div>
+
+    <!--Deuxième section-->
+<section class="section2Enigme">
+    <!--Deuxième section côté gauche-->
+    <div class="section2-left">
+        <h2 id="order">ENIGME NUMERO <span class="currentOrder">1</span> </h2>
+        <p class="currentQuestion">Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite
+            en Wakandais, et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
+
+        <p class="currentIndice"></p>
+
+        <h2 id="translate"> "SI JE SUIS FIDELE C'EST A CE TRONE PEU IMPORTE QUI MONTE DESSUS"</h2>
+    
+        <div class="form">
+            <form action="" class="quizzAnswerForm">
+                <div>
+                    <label for="reponse">
+                      Alors, as tu la réponse ?
+                    </label> <br>
+                    <textarea class="Answer" name="Réponse" id="reponse" cols="30" rows="1"
+                      placeholder="Réponse"></textarea>
+                </div>
+
+                <div class="submitButton">
+                    <button type="submit" id="quizzSubmitButton">ENVOYER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+     <!--Confirmation message popupbox-->
+        <div class="ResponsePopupBox">
+            <!--Blured background-->
+        </div>
+    
+        <div class="alert" id="ResponsePopupBox">
+            <div class="PopupBox-content">
+                <h2 class="win">Bravo !</h2>
+                <p class="winText">
+                    Tu as trouvé la réponse. Es tu prêt pour l'énigme suivante ?
+                </p>
+                <div>
+                    <button class="nextQuestion">Question suivante</button>
+                    <button type="submit" id="back">REVENIR A L'ACCUEIL</button>
+                </div>
+                <div class="comingFigCompte">
+                    <div class="figmaLog">
+                       <img src="Assets\Illustrations_Logo\Enigme\figma_logo.svg" alt="">
+                    </div>
+                    <div class="countDown">
+                        <h2>Coming soon...</h2>
+                        <div class="countDownBox">
+                           <div id="jour">00</div>:<div id="heure">00</div>:<div id="minute">00</div>:<div id="seconde">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Deuxième section côté droite-->
+    <div class="section2-right">
+        <div class="section2-right-text">
+            <p>Le savais tu ?</p>
+            <p class="doYouKnow">
+                Voici la transcription de l’alphabet :
+            </p>
+            <dl class="alphabet">
+                    <dt>A =</dt> <dd>A ;</dd>
+                    <dt>B =</dt> <dd>B ;</dd>
+                    <dt>C = </dt> <dd>C ;</dd>
+                    <dt>D = </dt> <dd>D ;</dd>
+                    <dt>E = </dt> <dd>E ;</dd>
+                    <dt>F = </dt> <dd>F ;</dd>
+                    <dt>G = </dt> <dd>G ;</dd>
+                    <dt>H = </dt> <dd>H ;</dd>
+                    <dt>I = </dt> <dd>I ;</dd>
+                    <dt>J = </dt> <dd>J ;</dd>
+                    <dt>K = </dt> <dd>K ;</dd>
+                    <dt>L = </dt> <dd>L ;</dd>
+                    <dt>M = </dt> <dd>M ;</dd>
+                    <dt>N = </dt> <dd>N ;</dd>
+                    <dt>O = </dt> <dd>O ;</dd>
+                    <dt>P = </dt> <dd>P ;</dd>
+                    <dt>Q = </dt> <dd>Q ;</dd>
+                    <dt>R = </dt> <dd>R ;</dd>
+                    <dt>S = </dt> <dd>S ;</dd>
+                    <dt>T = </dt> <dd>T ;</dd>
+                    <dt>U = </dt> <dd>U ;</dd> 
+                    <dt>X = </dt> <dd>X ;</dd>
+                    <dt>Y = </dt> <dd>Y ;</dd>
+                    <dt>Z = </dt> <dd>Z ;</dd>
+            </dl>
+        </div>
+        <div class="section2-right-image">
+            <img src="./Illustrations/Enigme/Pantherenigme2.png" alt="">
+        </div>
+    </div>
+</section>
+
+
+    <!--Footer-->
+    <Footer id="footer">
+        <a href="accueil.html">
+            <img class="marvel" src="./Illustrations/All_pages/footer2.png" alt="">
+        </a> 
+    <div class="footer1">
+        <div class="footer-logo">
+            <img src="./Illustrations/All_pages/footer1.png" alt="">
+        </div>
+        <div class="footer-pages">
+                <h4>PAGES</h4>
+                <ul>
+                    <li><a href="accueil.html">A propos</a></li>
+                    <li><a href="wakanda.html">Wakanda</a></li>
+                </ul>
+        </div>
+    
+        <div class="footer-social-media">
+            <h4>RETROUVEZ NOUS</h4>
+            <ul>
+                <li>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All_pages/footer3.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="blanc" src="./Illustrations/All_pages/footer4.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All_pages/footer5.png" alt=""></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="noir" src="./Illustrations/All_pages/footer6.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer2">
+        <p>2023 Tous droits réservés</p> 
+        <ul class="footer2-list">
+           <li><a href="#">Politique de confidentialité</a></li>
+           <li><a href="#">Conditions d’utilisation</a></li>
+        </ul>
+    </div>
+    </Footer>
+    
+</body>
+</html>

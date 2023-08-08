@@ -1,0 +1,697 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+/* Première section */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+}
+.section1Accueil .section1-text {
+  width: 60%;
+  margin-top: 160px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+.section1Accueil .section1-text p {
+  width: 85%;
+  text-align: justify;
+}
+.section1Accueil .section1-text a {
+  color: #FFFFFF;
+}
+.section1Accueil img {
+  width: 70%;
+  height: 70%;
+  margin-top: 18px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+/* Deuxième section */
+/**Design en général de la partie carousel côté HTML*/
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+}
+.section2Accueil #Carousel {
+  box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
+  transition: transform 0.3s;
+  transform: translate3d(0, -2px, 0);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2Accueil #Carousel .item {
+  position: relative;
+  display: flex;
+  margin-left: 1.4%;
+}
+.section2Accueil #Carousel .item .image {
+  width: 50%;
+}
+.section2Accueil #Carousel .item .image img {
+  width: 200px;
+  height: 230px;
+  padding-top: 6px;
+}
+.section2Accueil #Carousel .item .image img:hover {
+  transform: scale(1.4);
+}
+.section2Accueil #Carousel .item .section2-text {
+  padding: 20px 40px;
+  width: 40%;
+}
+.section2Accueil #Carousel .item .section2-text:hover {
+  transform: scale(1.2);
+}
+.section2Accueil #Carousel .item .section2-text h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #9E91B7;
+}
+.section2Accueil #Carousel .item .section2-text p {
+  width: 150%;
+  text-align: justify;
+  word-spacing: -1px;
+  font-size: 9px;
+}
+.section2Accueil #Carousel .item .section2-text a {
+  color: #FFFFFF;
+}
+
+/**DESIGN CAROUSEL COTE JS*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__container {
+  transition: transform 0.3s;
+  transform: translate3d(0, 0, 0);
+  display: flex;
+}
+
+.carousel__container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.carousel__next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -20px;
+  box-shadow: 0 0 20px #FFFFFF;
+  cursor: pointer;
+  right: 5px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/*.carousel__next {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 27%;
+    top: 1000px;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
+}*/
+.carousel__next:hover {
+  transform: scale(1.2);
+}
+
+.carousel__next--hidden {
+  opacity: 0;
+}
+
+.carousel__pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+.carousel__pagination__button {
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+  box-shadow: 0 2px #3232321a;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.carousel__pagination__button--active,
+.carousel__pagination__button:hover {
+  transform: scale(1.4);
+}
+
+@media screen and (min-width: 800px) {
+  .carousel__pagination {
+    display: block;
+  }
+}
+/* Troisième section */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Troisième section côté gauche */
+  /* Troisième section côté droite */
+}
+.section3Accueil .section3-left {
+  margin-left: 180px;
+}
+.section3Accueil .section3-left h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #9E91B7;
+}
+.section3Accueil .section3-left p {
+  text-align: justify;
+  width: 100%;
+}
+.section3Accueil .section3-right {
+  margin-left: 140px;
+  margin-right: 180px;
+}
+.section3Accueil .section3-right .image-BP {
+  position: relative;
+  height: 350px;
+  width: 250px;
+  margin-left: 50px;
+}
+.section3Accueil .section3-right .image-BP:hover {
+  transform: scale(1.2);
+}
+.section3Accueil .section3-right .section3-biographie {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  width: 350px;
+  height: 360px;
+  padding-top: 170px;
+  margin-top: -160px;
+}
+.section3Accueil .section3-right .section3-biographie h2 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.858);
+  text-align: center;
+  font-family: "Cantarell";
+  letter-spacing: 2px;
+}
+.section3Accueil .section3-right .section3-biographie .section3-items ul li {
+  display: inline-flex;
+  list-style-type: none;
+  background-color: #3D2DA6;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 10px;
+}
+.section3Accueil .section3-right .section3-biographie .section3-list ul li {
+  font-size: 12px;
+  list-style-type: none;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.775);
+}
+
+/* Quatrième section */
+.section4Accueil {
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.section4Accueil .form {
+  padding-top: 2%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 470px;
+  width: 700px;
+  border-radius: 150px;
+  margin: 100px 320px;
+  background: linear-gradient(180deg, #FFFFFF, #ffffff0b);
+}
+.section4Accueil .form p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.666);
+}
+.section4Accueil .form span {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.666);
+}
+.section4Accueil .form .Label input[type=nom], .section4Accueil .form .Label input[type=Email], .section4Accueil .form .Label input[type=Message] {
+  border: 1.5px solid rgba(0, 0, 0, 0.847);
+  background-color: transparent;
+  border-radius: 20px;
+  padding-right: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.section4Accueil .form .Label input[type=Message] {
+  padding-bottom: 120px;
+}
+.section4Accueil .form .Label *::placeholder {
+  color: rgba(39, 38, 38, 0.632);
+  font-size: 12px;
+}
+.section4Accueil .form .submit {
+  width: 20%;
+  border-radius: 20px;
+  border: none;
+  padding: 12px 30px;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.631);
+  background-color: #F2CEF2;
+  letter-spacing: 1px;
+}
+.section4Accueil .form .submit:hover {
+  box-shadow: #021740 0 0 20px;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+.popupBox {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 80vw;
+  left: -35%;
+  padding: 220px 60px;
+  top: 0%;
+  background-color: #3d2da66b;
+  border-radius: 38px;
+  z-index: 2;
+}
+.popupBox h2 {
+  color: #FFFFFF;
+}
+
+/* Code général pour les sections */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+  /* Autres propriétés CSS */
+}
+@media screen and (max-width: 767px) {
+  .section1Accueil {
+    /* Code spécifique pour les smartphones */
+    flex-direction: column;
+    margin: center;
+  }
+  .section1Accueil .section1-text {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .section1Accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section1Accueil {
+    /* Code spécifique pour les tablettes */
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .section1Accueil .section1-text {
+    width: 80%;
+    margin-top: 100px;
+  }
+  .section1Accueil img {
+    width: 80%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+
+/* Code général pour la conteneur .section2Accueil */
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section2Accueil {
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    height: auto;
+    padding: 20px;
+    background-color: #021740;
+  }
+  .section2Accueil #Carousel {
+    width: 100%;
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .section2Accueil .item {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section2Accueil .image img {
+    width: 150px;
+    height: 170px;
+  }
+  .section2Accueil .section2-text {
+    padding: 10px;
+    width: 100%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 14px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section2Accueil .section2-text {
+    width: 30%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 15px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 9px;
+  }
+}
+
+/* Code général pour la conteneur .section3Accueil */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section3Accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3Accueil .section3-left,
+.section3Accueil .section3-right {
+    margin-left: 100px;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3Accueil .section3-left {
+    margin-left: 50px;
+  }
+  .section3Accueil .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .section3-left {
+    margin-left: 0;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .section3-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section3-right .image-BP {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section3-right .section3-biographie {
+    width: 80%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+.section3-right .section3-list ul li {
+    font-size: 8px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3-left {
+    margin-left: 50px;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .section3-right .image-BP {
+    width: 60%;
+    height: auto;
+    margin-left: 30px;
+  }
+  .section3-right .section3-biographie {
+    width: 60%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+.section3-right .section3-list ul li {
+    font-size: 10px;
+  }
+}
+/* Code général pour la conteneur .section4Accueil */
+.section4Accueil {
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section4Accueil {
+    height: auto;
+  }
+  .section4Accueil .form {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 40px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section4Accueil {
+    height: 600px;
+  }
+  .section4Accueil .form {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .form {
+    height: auto;
+    padding-top: 5%;
+  }
+  .form p {
+    font-size: 10px;
+  }
+  .form span {
+    font-size: 24px;
+  }
+  .form .Label input[type=nom],
+.form .Label input[type=Email],
+.form .Label input[type=Message] {
+    padding-right: 100px;
+    padding-left: 5px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 80px;
+  }
+  .form *::placeholder {
+    font-size: 10px;
+  }
+  .form .submit {
+    width: 40%;
+    padding: 8px 20px;
+    font-size: 10px;
+    border-radius: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    height: 520px;
+    padding-top: 2%;
+  }
+  .form p {
+    font-size: 11px;
+  }
+  .form span {
+    font-size: 26px;
+  }
+  .form .Label input[type=nom],
+.form .Label input[type=Email],
+.form .Label input[type=Message] {
+    padding-right: 150px;
+    padding-left: 20px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 100px;
+  }
+  .form *::placeholder {
+    font-size: 11px;
+  }
+  .form .submit {
+    width: 30%;
+    padding: 10px 25px;
+    font-size: 12px;
+    border-radius: 18px;
+  }
+}

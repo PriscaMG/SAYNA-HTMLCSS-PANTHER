@@ -1,0 +1,1888 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+/* Première section */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+}
+.section1Accueil .section1-text {
+  width: 60%;
+  margin-top: 160px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+.section1Accueil .section1-text p {
+  width: 85%;
+  text-align: justify;
+}
+.section1Accueil .section1-text a {
+  color: #FFFFFF;
+}
+.section1Accueil img {
+  width: 70%;
+  height: 70%;
+  margin-top: 18px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+/* Deuxième section */
+/**Design en général de la partie carousel côté HTML*/
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+}
+.section2Accueil #Carousel {
+  box-shadow: 0 15px rgba(50, 50, 50, 0.1019607843), 0 5px 15px rgba(0, 0, 0, 0.1019607843);
+  transition: transform 0.3s;
+  transform: translate3d(0, -2px, 0);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2Accueil #Carousel .item {
+  position: relative;
+  display: flex;
+  margin-left: 1.4%;
+}
+.section2Accueil #Carousel .item .image {
+  width: 50%;
+}
+.section2Accueil #Carousel .item .image img {
+  width: 200px;
+  height: 230px;
+  padding-top: 6px;
+}
+.section2Accueil #Carousel .item .image img:hover {
+  transform: scale(1.4);
+}
+.section2Accueil #Carousel .item .section2-text {
+  padding: 20px 40px;
+  width: 40%;
+}
+.section2Accueil #Carousel .item .section2-text:hover {
+  transform: scale(1.2);
+}
+.section2Accueil #Carousel .item .section2-text h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #9E91B7;
+}
+.section2Accueil #Carousel .item .section2-text p {
+  width: 150%;
+  text-align: justify;
+  word-spacing: -1px;
+  font-size: 9px;
+}
+.section2Accueil #Carousel .item .section2-text a {
+  color: #FFFFFF;
+}
+
+/**DESIGN CAROUSEL COTE JS*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__container {
+  transition: transform 0.3s;
+  transform: translate3d(0, 0, 0);
+  display: flex;
+}
+
+.carousel__container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.carousel__next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -20px;
+  box-shadow: 0 0 20px #FFFFFF;
+  cursor: pointer;
+  right: 5px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/*.carousel__next {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 27%;
+    top: 1000px;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    background: url(../Illustrations/Accueil/iconflèche.png) center center no-repeat;
+}*/
+.carousel__next:hover {
+  transform: scale(1.2);
+}
+
+.carousel__next--hidden {
+  opacity: 0;
+}
+
+.carousel__pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+.carousel__pagination__button {
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+  box-shadow: 0 2px rgba(50, 50, 50, 0.1019607843);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.carousel__pagination__button--active,
+.carousel__pagination__button:hover {
+  transform: scale(1.4);
+}
+
+@media screen and (min-width: 800px) {
+  .carousel__pagination {
+    display: block;
+  }
+}
+/* Troisième section */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Troisième section côté gauche */
+  /* Troisième section côté droite */
+}
+.section3Accueil .section3-left {
+  margin-left: 180px;
+}
+.section3Accueil .section3-left h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #9E91B7;
+}
+.section3Accueil .section3-left p {
+  text-align: justify;
+  width: 100%;
+}
+.section3Accueil .section3-right {
+  margin-left: 140px;
+  margin-right: 180px;
+}
+.section3Accueil .section3-right .image-BP {
+  position: relative;
+  height: 350px;
+  width: 250px;
+  margin-left: 50px;
+}
+.section3Accueil .section3-right .image-BP:hover {
+  transform: scale(1.2);
+}
+.section3Accueil .section3-right .section3-biographie {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  width: 350px;
+  height: 360px;
+  padding-top: 170px;
+  margin-top: -160px;
+}
+.section3Accueil .section3-right .section3-biographie h2 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.858);
+  text-align: center;
+  font-family: "Cantarell";
+  letter-spacing: 2px;
+}
+.section3Accueil .section3-right .section3-biographie .section3-items ul li {
+  display: inline-flex;
+  list-style-type: none;
+  background-color: #3D2DA6;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 10px;
+}
+.section3Accueil .section3-right .section3-biographie .section3-list ul li {
+  font-size: 12px;
+  list-style-type: none;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.775);
+}
+
+/* Quatrième section */
+.section4Accueil {
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.section4Accueil .form {
+  padding-top: 2%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 470px;
+  width: 700px;
+  border-radius: 150px;
+  margin: 100px 320px;
+  background: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.0431372549));
+}
+.section4Accueil .form p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.666);
+}
+.section4Accueil .form span {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.666);
+}
+.section4Accueil .form .Label input[type=nom], .section4Accueil .form .Label input[type=Email], .section4Accueil .form .Label input[type=Message] {
+  border: 1.5px solid rgba(0, 0, 0, 0.847);
+  background-color: transparent;
+  border-radius: 20px;
+  padding-right: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.section4Accueil .form .Label input[type=Message] {
+  padding-bottom: 120px;
+}
+.section4Accueil .form .Label *::-moz-placeholder {
+  color: rgba(39, 38, 38, 0.632);
+  font-size: 12px;
+}
+.section4Accueil .form .Label *::placeholder {
+  color: rgba(39, 38, 38, 0.632);
+  font-size: 12px;
+}
+.section4Accueil .form .submit {
+  width: 20%;
+  border-radius: 20px;
+  border: none;
+  padding: 12px 30px;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.631);
+  background-color: #F2CEF2;
+  letter-spacing: 1px;
+}
+.section4Accueil .form .submit:hover {
+  box-shadow: #021740 0 0 20px;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+.popupBox {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 80vw;
+  left: -35%;
+  padding: 220px 60px;
+  top: 0%;
+  background-color: rgba(61, 45, 166, 0.4196078431);
+  border-radius: 38px;
+  z-index: 2;
+}
+.popupBox h2 {
+  color: #FFFFFF;
+}
+
+/* Code général pour les sections */
+.section1Accueil {
+  display: flex;
+  margin-left: 150px;
+  /* Autres propriétés CSS */
+}
+@media screen and (max-width: 767px) {
+  .section1Accueil {
+    /* Code spécifique pour les smartphones */
+    flex-direction: column;
+    margin: center;
+  }
+  .section1Accueil .section1-text {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .section1Accueil img {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section1Accueil {
+    /* Code spécifique pour les tablettes */
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .section1Accueil .section1-text {
+    width: 80%;
+    margin-top: 100px;
+  }
+  .section1Accueil img {
+    width: 80%;
+    height: auto;
+    margin-top: 18px;
+  }
+}
+
+/* Code général pour la conteneur .section2Accueil */
+.section2Accueil {
+  display: inline-flex;
+  background-color: #021740;
+  margin-left: 25%;
+  height: 230px;
+  animation: fade-in 5s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section2Accueil {
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    height: auto;
+    padding: 20px;
+    background-color: #021740;
+  }
+  .section2Accueil #Carousel {
+    width: 100%;
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .section2Accueil .item {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section2Accueil .image img {
+    width: 150px;
+    height: 170px;
+  }
+  .section2Accueil .section2-text {
+    padding: 10px;
+    width: 100%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 14px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section2Accueil .section2-text {
+    width: 30%;
+  }
+  .section2Accueil .section2-text h2 {
+    font-size: 15px;
+  }
+  .section2Accueil .section2-text p {
+    width: 100%;
+    font-size: 9px;
+  }
+}
+
+/* Code général pour la conteneur .section3Accueil */
+.section3Accueil {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  animation: fade-in 2s ease-in-out forwards;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section3Accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3Accueil .section3-left,
+  .section3Accueil .section3-right {
+    margin-left: 100px;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3Accueil .section3-left {
+    margin-left: 50px;
+  }
+  .section3Accueil .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .section3-left {
+    margin-left: 0;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section3-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section3-right .image-BP {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section3-right .section3-biographie {
+    width: 80%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 8px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section3-left {
+    margin-left: 50px;
+  }
+  .section3-left h2 {
+    font-size: 16px;
+  }
+  .section3-left p {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section3-right {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .section3-right .image-BP {
+    width: 60%;
+    height: auto;
+    margin-left: 30px;
+  }
+  .section3-right .section3-biographie {
+    width: 60%;
+    height: auto;
+    padding-top: 100px;
+    margin-top: -80px;
+  }
+  .section3-right h2 {
+    font-size: 18px;
+  }
+  .section3-right .section3-items ul li,
+  .section3-right .section3-list ul li {
+    font-size: 10px;
+  }
+}
+/* Code général pour la conteneur .section4Accueil */
+.section4Accueil {
+  background-image: url(Illustrations/Accueil/Pantherhome7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .section4Accueil {
+    height: auto;
+  }
+  .section4Accueil .form {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 40px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section4Accueil {
+    height: 600px;
+  }
+  .section4Accueil .form {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .form {
+    height: auto;
+    padding-top: 5%;
+  }
+  .form p {
+    font-size: 10px;
+  }
+  .form span {
+    font-size: 24px;
+  }
+  .form .Label input[type=nom],
+  .form .Label input[type=Email],
+  .form .Label input[type=Message] {
+    padding-right: 100px;
+    padding-left: 5px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 80px;
+  }
+  .form *::-moz-placeholder {
+    font-size: 10px;
+  }
+  .form *::placeholder {
+    font-size: 10px;
+  }
+  .form .submit {
+    width: 40%;
+    padding: 8px 20px;
+    font-size: 10px;
+    border-radius: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    height: 520px;
+    padding-top: 2%;
+  }
+  .form p {
+    font-size: 11px;
+  }
+  .form span {
+    font-size: 26px;
+  }
+  .form .Label input[type=nom],
+  .form .Label input[type=Email],
+  .form .Label input[type=Message] {
+    padding-right: 150px;
+    padding-left: 20px;
+  }
+  .form .Label input[type=Message] {
+    padding-bottom: 100px;
+  }
+  .form *::-moz-placeholder {
+    font-size: 11px;
+  }
+  .form *::placeholder {
+    font-size: 11px;
+  }
+  .form .submit {
+    width: 30%;
+    padding: 10px 25px;
+    font-size: 12px;
+    border-radius: 18px;
+  }
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+/*Première section*/
+.section1Wakanda {
+  background-image: url(../Illustrations/Wakanda/Pantherwakanda1.png);
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  background-position-x: -200px;
+  background-position-y: -100px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+.section1Wakanda .section1-text h2 {
+  font-size: 43px;
+  letter-spacing: 3px;
+  margin-left: 150px;
+  padding-top: 220px;
+}
+.section1Wakanda .section1-text h3 {
+  color: #9E91B7;
+  font-size: 25.5px;
+  letter-spacing: 7px;
+  margin-left: 150px;
+  margin-top: -30px;
+}
+.section1Wakanda .section1-text p {
+  width: 26%;
+  text-align: justify;
+  margin-left: 150px;
+  padding-top: 3px;
+}
+
+/*Deuxième section*/
+.tiger img {
+  position: absolute;
+  height: 900px;
+  width: 1150px;
+  top: 750px;
+  left: 120px;
+  opacity: 0.9;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+.section2Wakanda {
+  display: flex;
+  margin-top: -70px;
+  animation: fade-in 2s ease-in-out forwards;
+  /*Deuxième section côté gauche*/
+  /*Deuxième section côté droite*/
+}
+.section2Wakanda .section2-left {
+  text-align: justify;
+  width: 45%;
+  margin-left: 150px;
+}
+.section2Wakanda .section2-left h2 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.section2Wakanda .section2-left p {
+  color: #FFFFFF;
+}
+.section2Wakanda .section2-left iframe {
+  height: 200px;
+  width: 470px;
+  padding: 50px 0;
+}
+.section2Wakanda .section2-right h2 {
+  margin-left: 100px;
+}
+.section2Wakanda .section2-right p {
+  text-align: justify;
+  width: 62%;
+  margin-left: 100px;
+  margin-right: 150px;
+  color: #FFFFFF;
+}
+.section2Wakanda .section2-right img {
+  height: 250px;
+  width: 450px;
+  margin-left: 100px;
+  padding-top: 30px;
+}
+
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+/*Première section*/
+.section1Enigme {
+  display: flex;
+  animation: fade-in 2s ease-in-out forwards;
+  background-image: url(../Illustrations/Enigme/Pantherenigme1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 70%;
+}
+.section1Enigme .section1-right h2 {
+  font-size: 45px;
+  letter-spacing: 6px;
+  text-align: justify;
+  line-height: 60px;
+  margin-top: 200px;
+  margin-left: 720px;
+  font-weight: 400;
+  color: #9E91B7;
+}
+.section1Enigme .section1-right h2 span {
+  letter-spacing: 3px;
+}
+.section1Enigme .section1-right p {
+  text-align: justify;
+  width: 28%;
+  margin-left: 800px;
+  margin-top: 120px;
+  word-spacing: -1.2px;
+}
+.section1Enigme .section1-right .circle {
+  width: 580px;
+  height: 320px;
+  margin-left: 700px;
+  margin-top: -200px;
+}
+.section1Enigme .section1-right .line {
+  margin-left: 720px;
+  margin-top: -100px;
+  width: 600px;
+  height: 5px;
+}
+
+/* SECTION 2 : Section Principale et formulaire */
+.section2Enigme {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -10%;
+}
+.section2Enigme .section2-left #order {
+  font-family: "beyno";
+  font-size: 25px;
+  text-decoration: underline;
+}
+.section2Enigme .section2-left #order span {
+  font-family: "Cantarell";
+}
+.section2Enigme .section2-left .currentQuestion {
+  width: 120%;
+  font-size: 12px;
+}
+.section2Enigme .section2-left #translate {
+  font-family: "Wakanda";
+  font-size: 30px;
+  width: 80%;
+  letter-spacing: 3px;
+  line-height: 40px;
+  margin: 50px 0;
+}
+.section2Enigme .section2-left .form {
+  margin-top: 50px;
+  margin-right: 20%;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm label {
+  color: #FFFFFF;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm textarea {
+  color: #9E91B7;
+  font-size: 12px;
+  border-color: var(--mySoftPink);
+  background-color: transparent;
+  padding: 15px 15px;
+  height: 20px;
+  border-radius: 50px;
+  width: 100%;
+  margin: 2% 0 10%;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm textarea::-moz-placeholder {
+  color: #9E91B7;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm textarea::placeholder {
+  color: #9E91B7;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm .submitButton {
+  display: flex;
+  justify-content: center;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm .submitButton button {
+  /* width: 174px;
+  height: 54px; trop grand */
+  width: 125px;
+  height: 40px;
+  border: none;
+  border-radius: 38px;
+  background-color: #DF99F2;
+  font-weight: bolder;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.631);
+  cursor: pointer;
+}
+.section2Enigme .section2-left .form .quizzAnswerForm .submitButton button:hover {
+  box-shadow: #F2CEF2 0 0 20px;
+}
+.section2Enigme .section2-right .section2-right-text {
+  padding-top: 90px;
+  text-align: center;
+  margin-top: 25%;
+  margin-left: 15%;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.section2Enigme .section2-right .section2-right-text p {
+  font-size: 13px;
+  text-align: center;
+  width: 70%;
+  word-spacing: 0.1px;
+  letter-spacing: 0.1px;
+}
+.section2Enigme .section2-right .section2-right-text dl dt, .section2Enigme .section2-right .section2-right-text dl dd {
+  display: inline;
+  font-size: 16px;
+  color: #9E91B7;
+  font-weight: bold;
+}
+.section2Enigme .section2-right .section2-right-text dl dd {
+  font-family: "Wakanda";
+  margin-left: 2px;
+  margin-right: 8px;
+}
+.section2Enigme .section2-right .section2-right-image {
+  margin-left: 5%;
+  margin-top: -15%;
+}
+.section2Enigme .section2-right .section2-right-image img {
+  width: 580px;
+  height: 400px;
+  margin-top: -180px;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+.ResponsePopupBox {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  filter: blur(58px);
+  background: linear-gradient(#3D2DA6, #021740);
+  display: none;
+  z-index: 2;
+}
+
+#ResponsePopupBox {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #FFFFFF;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+}
+#ResponsePopupBox .PopupBox-content {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10%;
+  background: linear-gradient(#9E91B7, rgba(61, 45, 166, 0));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 3.45 3.45 #000000;
+  border-radius: 20px;
+  filter: none;
+}
+#ResponsePopupBox .PopupBox-content .win {
+  color: #FFFFFF;
+  font-family: Cantarell;
+  text-transform: uppercase;
+  text-align: center;
+}
+#ResponsePopupBox .PopupBox-content .winText {
+  font-size: 14px;
+  text-align: center;
+}
+#ResponsePopupBox .PopupBox-content .nextQuestion, #ResponsePopupBox .PopupBox-content #back {
+  width: 174px;
+  max-width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 38px;
+  background-color: var(--mySoftPink);
+  font-weight: bolder;
+  font-size: 12px;
+  text-transform: uppercase;
+  /**Bouton retour à l'accueil à la fin du quizz */
+}
+#ResponsePopupBox .PopupBox-content .nextQuestion #back, #ResponsePopupBox .PopupBox-content #back #back {
+  display: none;
+}
+#ResponsePopupBox .PopupBox-content .comingFigCompte {
+  display: none;
+}
+#ResponsePopupBox .PopupBox-content .comingFigCompte * {
+  margin: 0 5px;
+  font-weight: bold;
+}
+#ResponsePopupBox .PopupBox-content .comingFigCompte .countDown h2 {
+  font-family: Cantarell;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+#ResponsePopupBox .PopupBox-content .comingFigCompte .countDown .countDownBox {
+  font-size: 25px;
+  font-weight: bold;
+}
+#ResponsePopupBox .PopupBox-content .comingFigCompte .countDown .countDownBox div {
+  display: inline;
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.Header .Logo {
+  margin-top: 20px;
+  width: 70%;
+  height: 45%;
+}
+.Header .Logo:hover {
+  filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+.Header .Header-menu {
+  display: flex;
+  list-style-type: none;
+}
+.Header .Header-menu li a {
+  padding-left: 60px;
+  font-family: "beyno";
+  font-size: 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.Header .Header-menu li a:hover {
+  text-decoration: underline;
+}
+.Header .Header-menu li a.active {
+  color: #9E91B7;
+  text-decoration: underline;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Code général pour .Header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  .Header {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .Header .Logo {
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .Header .Header-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .Header .Header-menu li a {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Header .Header-menu li a {
+    padding-left: 30px;
+  }
+}
+
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+#footer {
+  background-image: url(../Illustrations/All_pages/back_footer.png);
+  margin-top: 100px;
+  height: 550px;
+}
+#footer .marvel {
+  position: absolute;
+  margin-top: 240px;
+  margin-left: 310px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+#footer .marvel:hover {
+  filter: invert(10%) sepia(78%) saturate(5771%) hue-rotate(251deg) brightness(87%) contrast(87%);
+}
+#footer .footer1 {
+  display: flex;
+  animation: fade-in 2s ease-in-out forwards;
+}
+#footer .footer1 .footer-logo {
+  margin-left: 250px;
+  margin-right: -50px;
+}
+#footer .footer1 .footer-logo img {
+  height: 300px;
+  width: 250px;
+  margin-top: 120px;
+}
+#footer .footer1 .footer-pages {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+#footer .footer1 .footer-pages h4 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16.5px;
+  font-family: "Cantarell";
+  margin-left: 40px;
+  letter-spacing: 3px;
+}
+#footer .footer1 .footer-pages ul li {
+  display: block;
+  list-style-type: none;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: "Cantarell";
+}
+#footer .footer1 .footer-pages a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-family: "Cantarell";
+}
+#footer .footer1 .footer-pages a:hover {
+  text-decoration: underline;
+}
+#footer .footer1 .footer-social-media {
+  margin-top: 100px;
+  margin-left: 165px;
+  line-height: 20px;
+}
+#footer .footer1 .footer-social-media h4 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16.5px;
+  font-family: "Cantarell";
+  margin-left: 40px;
+  letter-spacing: 3px;
+}
+#footer .footer1 .footer-social-media ul li {
+  display: block;
+  list-style-type: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family: "Cantarell";
+}
+#footer .footer1 .footer-social-media a img {
+  height: 35px;
+  width: 35px;
+  margin-right: 20px;
+}
+#footer .footer1 .footer-social-media a img:hover {
+  filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+#footer .footer1 .footer-social-media a img:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+#footer .footer2 {
+  display: flex;
+  list-style-type: none;
+  margin-left: 600px;
+  margin-top: -70px;
+  margin-bottom: 100px;
+  animation: fade-in 2s ease-in-out forwards;
+}
+#footer .footer2 p {
+  font-size: 13px;
+  padding-top: 4px;
+}
+#footer .footer2 .footer2-list {
+  display: flex;
+  color: #FFFFFF;
+  margin-left: -10px;
+}
+#footer .footer2 .footer2-list a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Cantarell";
+  padding-right: 25px;
+}
+#footer .footer2 .footer2-list a:hover {
+  text-decoration: underline;
+}
+
+/* Code général pour la conteneur #footer */
+#footer {
+  background-image: url(../Illustrations/All_pages/back_footer.png);
+  margin-top: 100px;
+  height: 550px;
+  /* Code spécifique pour les smartphones */
+  /* Code spécifique pour les tablettes */
+}
+@media screen and (max-width: 767px) {
+  #footer {
+    height: auto;
+    padding: 20px;
+  }
+  #footer .marvel {
+    margin: 0 auto;
+    display: block;
+    animation: none;
+    filter: none;
+    margin-top: 30px;
+  }
+  #footer .footer1 {
+    flex-direction: column;
+  }
+  #footer .footer1 .footer-logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #footer .footer1 .footer-logo img {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+  }
+  #footer .footer1 .footer-pages {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-pages h4 {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-pages ul li {
+    margin-bottom: 10px;
+  }
+  #footer .footer1 .footer-social-media {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-social-media h4 {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  #footer .footer1 .footer-social-media ul li {
+    margin-bottom: 10px;
+  }
+  #footer .footer2 {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  #footer .footer2 p {
+    font-size: 11px;
+    padding-top: 2px;
+  }
+  #footer .footer2 .footer2-list {
+    margin-left: 0;
+  }
+  #footer .footer2 .footer2-list a {
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #footer {
+    height: 500px;
+    padding: 30px;
+  }
+  #footer .footer1 .footer-logo img {
+    width: 230px;
+  }
+  #footer .footer1 .footer-pages h4 {
+    font-size: 15px;
+  }
+  #footer .footer1 .footer-social-media h4 {
+    font-size: 15px;
+  }
+  #footer .footer2 p {
+    font-size: 12px;
+  }
+  #footer .footer2 .footer2-list a {
+    font-size: 12px;
+  }
+}
+
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}
+
+.left-border1 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  left: 48px;
+  height: 40%;
+  top: 0%;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.left-border2 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  left: 27px;
+  height: 63%;
+  top: 0%;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+.Social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 40px;
+  top: 260px;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+.Social-media .social {
+  padding: 10px 0;
+  width: 17px;
+  height: 17px;
+}
+.Social-media .social:hover {
+  filter: invert(20%) sepia(100%) saturate(0%) hue-rotate(96deg) brightness(105%) contrast(102%);
+}
+
+@keyframes fade-in-scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Code général pour .left-border1 et .left-border2 */
+.left-border1 .left-border2 {
+  border: solid 1.9px #9E91B7;
+  position: fixed;
+  animation: fade-in-scroll 2s ease-in-out forwards;
+}
+
+/* Code spécifique pour les smartphones */
+@media screen and (max-width: 767px) {
+  .left-border1 .left-border2 {
+    left: 60px;
+  }
+  .left-border1 {
+    height: 10%;
+  }
+  .left-border2 {
+    height: 16%;
+  }
+  .Social-media {
+    left: 42px;
+    top: 220px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
+  }
+}
+/* Code spécifique pour les tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .left-border1 .left-border2 {
+    left: 80px;
+  }
+  .left-border1 {
+    height: 14%;
+  }
+  .left-border2 {
+    height: 20%;
+  }
+  .Social-media {
+    left: 57px;
+    top: 270px;
+  }
+  .Social-media .social {
+    width: 15px;
+    height: 15px;
+  }
+}
+@font-face {
+  font-family: "Panthera";
+  src: url(../police/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+  font-family: "beyno";
+  src: url(../police/beyno.ttf);
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url(../police/Cantarell-Regular.ttf);
+}
+@font-face {
+  font-family: "Wakanda";
+  src: url(../police/WakandaForever-Regular.ttf);
+}
+html {
+  position: relative;
+  z-index: 1;
+  background-image: url(../Illustrations/All_pages/arrière_plan.png);
+}
+
+body {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 45px;
+  color: #9E91B7;
+}
+h1:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-family: "beyno";
+  font-size: 25px;
+  color: #9E91B7;
+}
+h2:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-family: "Wakanda";
+  font-size: 43px;
+}
+h3:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: "Cantarell";
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+/**Image qui suit la souris */
+#mouseImg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  z-index: 5;
+}/*# sourceMappingURL=main.css.map */
