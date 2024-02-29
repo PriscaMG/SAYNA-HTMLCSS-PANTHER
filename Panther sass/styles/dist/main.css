@@ -116,7 +116,7 @@ p {
   animation: fade-in 5s ease-in-out forwards;
 }
 .section2Accueil #Carousel {
-  box-shadow: 0 15px rgba(50, 50, 50, 0.1019607843), 0 5px 15px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
   transition: transform 0.3s;
   transform: translate3d(0, -2px, 0);
   height: 100%;
@@ -234,7 +234,7 @@ p {
   border-radius: 50%;
   display: inline-block;
   margin: 0 3px;
-  box-shadow: 0 2px rgba(50, 50, 50, 0.1019607843);
+  box-shadow: 0 2px #3232321a;
   transition: transform 0.3s;
   cursor: pointer;
 }
@@ -333,7 +333,7 @@ p {
   width: 700px;
   border-radius: 150px;
   margin: 100px 320px;
-  background: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.0431372549));
+  background: linear-gradient(180deg, #FFFFFF, #ffffff0b);
 }
 .section4Accueil .form p {
   font-size: 12px;
@@ -357,10 +357,6 @@ p {
 }
 .section4Accueil .form .Label input[type=Message] {
   padding-bottom: 120px;
-}
-.section4Accueil .form .Label *::-moz-placeholder {
-  color: rgba(39, 38, 38, 0.632);
-  font-size: 12px;
 }
 .section4Accueil .form .Label *::placeholder {
   color: rgba(39, 38, 38, 0.632);
@@ -391,7 +387,7 @@ p {
   left: -35%;
   padding: 220px 60px;
   top: 0%;
-  background-color: rgba(61, 45, 166, 0.4196078431);
+  background-color: #3d2da66b;
   border-radius: 38px;
   z-index: 2;
 }
@@ -515,7 +511,7 @@ p {
     align-items: center;
   }
   .section3Accueil .section3-left,
-  .section3Accueil .section3-right {
+.section3Accueil .section3-right {
     margin-left: 100px;
     margin-right: 0;
     text-align: center;
@@ -543,6 +539,7 @@ p {
     width: 80%;
     margin: 0 auto;
   }
+
   .section3-right {
     margin-left: 0;
     margin-right: 0;
@@ -562,7 +559,7 @@ p {
     font-size: 18px;
   }
   .section3-right .section3-items ul li,
-  .section3-right .section3-list ul li {
+.section3-right .section3-list ul li {
     font-size: 8px;
   }
 }
@@ -578,6 +575,7 @@ p {
     width: 90%;
     margin: 0 auto;
   }
+
   .section3-right {
     margin-left: 20px;
     margin-right: 20px;
@@ -597,7 +595,7 @@ p {
     font-size: 18px;
   }
   .section3-right .section3-items ul li,
-  .section3-right .section3-list ul li {
+.section3-right .section3-list ul li {
     font-size: 10px;
   }
 }
@@ -648,16 +646,13 @@ p {
     font-size: 24px;
   }
   .form .Label input[type=nom],
-  .form .Label input[type=Email],
-  .form .Label input[type=Message] {
+.form .Label input[type=Email],
+.form .Label input[type=Message] {
     padding-right: 100px;
     padding-left: 5px;
   }
   .form .Label input[type=Message] {
     padding-bottom: 80px;
-  }
-  .form *::-moz-placeholder {
-    font-size: 10px;
   }
   .form *::placeholder {
     font-size: 10px;
@@ -682,16 +677,13 @@ p {
     font-size: 26px;
   }
   .form .Label input[type=nom],
-  .form .Label input[type=Email],
-  .form .Label input[type=Message] {
+.form .Label input[type=Email],
+.form .Label input[type=Message] {
     padding-right: 150px;
     padding-left: 20px;
   }
   .form .Label input[type=Message] {
     padding-bottom: 100px;
-  }
-  .form *::-moz-placeholder {
-    font-size: 11px;
   }
   .form *::placeholder {
     font-size: 11px;
@@ -1040,9 +1032,6 @@ p {
   width: 100%;
   margin: 2% 0 10%;
 }
-.section2Enigme .section2-left .form .quizzAnswerForm textarea::-moz-placeholder {
-  color: #9E91B7;
-}
 .section2Enigme .section2-left .form .quizzAnswerForm textarea::placeholder {
   color: #9E91B7;
 }
@@ -1136,9 +1125,8 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 10%;
-  background: linear-gradient(#9E91B7, rgba(61, 45, 166, 0));
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: linear-gradient(#9E91B7, #3D2DA600);
+  backdrop-filter: blur(10px);
   box-shadow: 0 3.45 3.45 #000000;
   border-radius: 20px;
   filter: none;
@@ -1740,7 +1728,7 @@ p {
   border: solid 1.9px #9E91B7;
   position: fixed;
   left: 27px;
-  height: 70%;
+  height: 63%;
   top: 0%;
   animation: fade-in-scroll 2s ease-in-out forwards;
 }
@@ -1785,12 +1773,15 @@ p {
   .left-border1 .left-border2 {
     left: 60px;
   }
+
   .left-border1 {
     height: 10%;
   }
+
   .left-border2 {
     height: 16%;
   }
+
   .Social-media {
     left: 42px;
     top: 220px;
@@ -1805,12 +1796,15 @@ p {
   .left-border1 .left-border2 {
     left: 80px;
   }
+
   .left-border1 {
     height: 14%;
   }
+
   .left-border2 {
     height: 20%;
   }
+
   .Social-media {
     left: 57px;
     top: 270px;
@@ -1885,4 +1879,4 @@ p {
   display: block;
   width: 30px;
   z-index: 5;
-}/*# sourceMappingURL=main.css.map */
+}

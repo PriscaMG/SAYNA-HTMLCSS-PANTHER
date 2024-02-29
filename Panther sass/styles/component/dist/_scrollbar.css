@@ -95,7 +95,7 @@ p {
   border: solid 1.9px #9E91B7;
   position: fixed;
   left: 27px;
-  height: 63%;
+  height: 70%;
   top: 0%;
   animation: fade-in-scroll 2s ease-in-out forwards;
 }
